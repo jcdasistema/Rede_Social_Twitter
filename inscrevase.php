@@ -4,16 +4,13 @@
 		<meta charset="UTF-8">
 
 		<title>Twitter clone</title>
-
+		
 		<!-- jquery - link cdn -->
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
 		<!-- bootstrap - link cdn -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	
-		<script>
-			// código javascript						
-		</script>
 	</head>
 
 	<body>
@@ -33,30 +30,7 @@
 	        
 	        <div id="navbar" class="navbar-collapse collapse">
 	          <ul class="nav navbar-nav navbar-right">
-	            <li><a href="inscrevase.php">Inscrever-se</a></li>
-	            <li class="">
-	            	<a id="entrar" data-target="#" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Entrar</a>
-					<ul class="dropdown-menu" aria-labelledby="entrar">
-						<div class="col-md-12">
-				    		<p>Você possui uma conta?</h3>
-				    		<br />
-							<form method="post" action="" id="formLogin">
-								<div class="form-group">
-									<input type="text" class="form-control" id="campo_usuario" name="usuario" placeholder="Usuário" />
-								</div>
-								
-								<div class="form-group">
-									<input type="password" class="form-control red" id="campo_senha" name="senha" placeholder="Senha" />
-								</div>
-								
-								<button type="buttom" class="btn btn-primary" id="btn_login">Entrar</button>
-
-								<br /><br />
-								
-							</form>
-						</form>
-				  	</ul>
-	            </li>
+	            <li><a href="index.php">Voltar para Home</a></li>
 	          </ul>
 	        </div><!--/.nav-collapse -->
 	      </div>
@@ -64,14 +38,37 @@
 
 
 	    <div class="container">
+	    	
+	    	<br /><br />
 
-	      <!-- Main component for a primary marketing message or call to action -->
-	      <div class="jumbotron">
-	        <h1>Bem vindo ao twitter clone</h1>
-	        <p>Veja o que está acontecendo agora...</p>
-	      </div>
+	    	<div class="col-md-4"></div>
+	    	<div class="col-md-4">
+	    		<h3>Inscreva-se já.</h3>
+	    		<br />
+				<form method="post" action="registra_usuario.php" id="formCadastrarse">
+					<div class="form-group">
+						<input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuário" required="requiored">
+					</div>
 
-	      <div class="clearfix"></div>
+					<div class="form-group">
+						<input type="email" class="form-control" id="email" name="email" placeholder="Email" required="requiored">
+					</div>
+					
+					<div class="form-group">
+						<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required="requiored">
+					</div>
+					
+					<button type="submit" class="btn btn-primary form-control">Inscreva-se</button>
+				</form>
+			</div>
+			<div class="col-md-4"></div>
+
+			<div class="clearfix"></div>
+			<br />
+			<div class="col-md-4"></div>
+			<div class="col-md-4"></div>
+			<div class="col-md-4"></div>
+
 		</div>
 
 
