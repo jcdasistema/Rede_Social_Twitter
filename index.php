@@ -5,12 +5,22 @@
 
 		<title>Twitter clone</title>
 
-		<!-- jquery - link cdn -->
+		<!-- jquery - link cdn-->
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 
-		<!-- bootstrap - link cdn -->
+		<!-- bootstrap - link cdn-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	
+	<!-- bootstrap local-->
+            <!--CSS-->
+       <!-- <link rel="stylesheet" href="css/bootstrap.min.css">-->
+        
+        <!--jQuery-->
+        <script  type=text/javascript" src="js/jquery-3.4.1.min.js"></script> 
+        
+     <script type=text/javascript" src="js/bootstrap.min.js"></script>
+        
+        <script type=text/javascript" src="js/bootstrap.bundle.min.js"></script>
+        
 		<script>
 			// código javascript						
 		</script>
