@@ -1,3 +1,11 @@
+<?
+    session_start();
+
+    if(!$_SESSION['usuario']){
+        header('Location: index.php?erro=1');
+    }
+?>
+
 <!DOCTYPE HTML>
 <html lang="pt-br">
 	<head>
@@ -30,7 +38,7 @@
 	        
 	        <div id="navbar" class="navbar-collapse collapse">
 	          <ul class="nav navbar-nav navbar-right">
-	            <li><a href="index.php">Voltar para Home</a></li>
+	            <li><a href="sair.php">Sair</a></li>
 	          </ul>
 	        </div><!--/.nav-collapse -->
 	      </div>
@@ -43,23 +51,11 @@
 
 	    	<div class="col-md-4"></div>
 	    	<div class="col-md-4">
-	    		<h3>Inscreva-se já.</h3>
-	    		<br />
-				<form method="post" action="registra_usuario.php" id="formCadastrarse">
-					<div class="form-group">
-						<input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuário" required="requiored">
-					</div>
-
-					<div class="form-group">
-						<input type="email" class="form-control" id="email" name="email" placeholder="Email" required="requiored">
-					</div>
-					
-					<div class="form-group">
-						<input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" required="requiored">
-					</div>
-					
-					<button type="submit" class="btn btn-primary form-control">Inscreva-se</button>
-				</form>
+	    		Usuário autenticado!!!
+                <br />
+                <?= $_SESSION['usuario'] ?>
+                <br />
+                <?= $_SESSION['email'] ?>
 			</div>
 			<div class="col-md-4"></div>
 
