@@ -2,7 +2,7 @@
 
 	$erro = isset($_GET['erro']) ? $_GET['erro'] : 0;
 
-?>
+?>        
 
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -41,10 +41,8 @@
 					}
 
 					if(campo_vazio) return false;
-
-				});
-
-			});
+                                    });
+		});
 
 		</script>
 	</head>
@@ -82,11 +80,11 @@
 									<input type="password" class="form-control red" id="campo_senha" name="senha" placeholder="Senha" />
 								</div>
 								
-								<button type="buttom" class="btn btn-primary" id="btn_login">Entrar</button>
+								<button type="submit" class="btn btn-primary" id="btn_login">Entrar</button>
 
 								<br /><br />
 								
-							</form>
+							
 
 							<?php
 
@@ -96,7 +94,7 @@
 
 							?>
 
-						</form>
+						</form>                                                                                
 				  	</ul>
 	            </li>
 	          </ul>
@@ -109,7 +107,7 @@
 
 	      <!-- Main component for a primary marketing message or call to action -->
 	      <div class="jumbotron">
-	        <h1>Bem vindo ao twitter clone</h1>
+	        <h1>Bem vindo ao twitter Gil Rodrigues</h1>
 	        <p>Veja o que está acontecendo agora...</p>
 	      </div>
 

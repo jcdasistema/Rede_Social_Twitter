@@ -5,7 +5,7 @@
     require_once('db.class.php');
 
     $usuario = $_POST['usuario'];
-    $senha = $_POST['senha'];
+        $senha = md5($_POST['senha']);
 
     $sql = "SELECT usuario, email FROM usuarios WHERE usuario = '$usuario' AND senha = '$senha'";
 
@@ -27,13 +27,13 @@
 
         }else{
 
-            header('Location: index.php?erro=1');
+            header('Location: index.php?erro=2');
 
         }
 
     }else{
-        
-        echo "Erro na execução da consulta, favor entrar em contato com o admin do site";
+    
+        echo "Deu errado!";                                                     
 
     }
 

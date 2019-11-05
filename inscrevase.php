@@ -1,3 +1,14 @@
+<?php
+
+$usuario_cadastrado = isset($_GET['UsuarioJaExiste']) ? $_GET['UsuarioJaExiste']:0 ;
+
+$email_cadastrado = isset($_GET['EmailJaExiste']) ? $_GET['EmailJaExiste']:0 ;
+
+?>
+
+
+
+
 <!DOCTYPE HTML>
 <html lang="pt-br">
 	<head>
@@ -48,10 +59,20 @@
 				<form method="post" action="registra_usuario.php" id="formCadastrarse">
 					<div class="form-group">
 						<input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuário" required="requiored">
+					<?php 
+					if ($usuario_cadastrado){
+					echo '<font style="color:blue">Este Usuário já existe';}
+					?>
+					
+					
 					</div>
 
 					<div class="form-group">
 						<input type="email" class="form-control" id="email" name="email" placeholder="Email" required="requiored">
+					<?php if ($email_cadastrado){
+					echo 'Este email já existe como cadastrado';}
+					?>
+					
 					</div>
 					
 					<div class="form-group">

@@ -1,8 +1,23 @@
+
+
+<?php
+
+ session_start();
+?>
+
 <?
-    session_start();
+
+
 
     if(!$_SESSION['usuario']){
         header('Location: index.php?erro=1');
+    }
+    
+    else{
+      $_SESSION['usuario'] = $dados_usuario['usuario'] ;
+         $_SESSION['email'] =  $dados_usuario['email'] ;
+
+    
     }
 ?>
 
@@ -45,26 +60,34 @@
 	    </nav>
 
 
-	    <div class="container">
+	    <div class="container">                
+	    
+
+	   <div class="col-md-3"><!--colocar 3-->  <div class="panel panel-dafault"> 
+           <div class="panel-body" style="background-color: #ccc" > 
+                
+              <!-- acrescente o código abaixo-->
+              <h4> <?= $_SESSION['usuario']?> </h4>
+              <hr/> <!--linha horizontal-->              
+              <!--crie esta div aqui-->
+              <div class="col-md-6">
+                  TWETTS </br> 1                    
+              </div> <!-- fim TWETTS-->   
+              
+              <!--acrescente mais esta div-->
+              <div class="col-md-6">
+                  SEGUIDORES </br> 2    
+                  
+              </div>
+              
+              
+           </div>   </div>   </div>
 	    	
-	    	<br /><br />
-
-	    	<div class="col-md-4"></div>
-	    	<div class="col-md-4">
-	    		Usuário autenticado!!!
-                <br />
-                <?= $_SESSION['usuario'] ?>
-                <br />
-                <?= $_SESSION['email'] ?>
-			</div>
-			<div class="col-md-4"></div>
-
-			<div class="clearfix"></div>
-			<br />
-			<div class="col-md-4"></div>
-			<div class="col-md-4"></div>
-			<div class="col-md-4"></div>
-
+           
+           
+           
+			<div class="col-md-4"><!--colocar 3--></div>
+			
 		</div>
 
 
